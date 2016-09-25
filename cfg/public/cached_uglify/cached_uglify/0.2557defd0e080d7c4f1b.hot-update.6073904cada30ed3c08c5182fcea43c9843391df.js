@@ -1,0 +1,1 @@
+webpackHotUpdate(0,{302:function(module,exports){eval("// removed by extract-text-webpack-plugin\n\n/*****************\n ** WEBPACK FOOTER\n ** ./src/styles/app2.less\n ** module id = 302\n ** module chunks = 0\n **/\n//# sourceURL=webpack:///./src/styles/app2.less?")}});

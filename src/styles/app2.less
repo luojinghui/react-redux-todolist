@@ -1,0 +1,21 @@
+@width: 200px;
+@height: 40px;
+@color: rgb(20,140,30);
+@cl: lightskyblue;
+
+.hello2() {
+  background-color: @cl;
+}
+
+.hello {
+  .hello2();
+}
+.test {
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+
+  border-radius: 10px;
+
+  background-image: linear-gradient(top, #f65131, #fff);
+}
