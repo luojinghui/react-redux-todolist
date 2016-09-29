@@ -13,6 +13,7 @@ import Footer from './Footer';
 class Todo extends Component {
   render() {
 
+      console.log(this.props);
     const { dispatch, visibleTodos, visibilityFilter } = this.props;
     return (
       <div>
