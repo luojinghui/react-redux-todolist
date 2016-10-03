@@ -10,29 +10,29 @@
 // render();
 
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { createStore } from 'redux'
-import APP from './components/App'
-import CounterReducer from './reducers/Counter'
-
-
-const ele = document.getElementById('app');
-const store = createStore(CounterReducer);
-
-const render = () => {
-  ReactDOM.render(
-    <APP
-      value = {store.getState()}
-      OnIncrement = {() => {store.dispatch({ type: 'increment' })}}
-      OnDecrement = {() => {store.dispatch({ type: 'decrement' })}}
-    />,
-    ele
-  )
-}
-
-render();
-store.subscribe(render);
+// import React from 'react'
+// import ReactDOM from 'react-dom'
+// import { createStore } from 'redux'
+// import APP from './components/App'
+// import CounterReducer from './reducers/Counter'
+//
+//
+// const ele = document.getElementById('app');
+// const store = createStore(CounterReducer);
+//
+// const render = () => {
+//   ReactDOM.render(
+//     <APP
+//       value = {store.getState()}
+//       OnIncrement = {() => {store.dispatch({ type: 'increment' })}}
+//       OnDecrement = {() => {store.dispatch({ type: 'decrement' })}}
+//     />,
+//     ele
+//   )
+// }
+//
+// render();
+// store.subscribe(render);
 
 
 
@@ -59,22 +59,22 @@ store.subscribe(render);
 // render();
 // store.subscribe(render);
 
-// import React from 'react'
-// import { render } from 'react-dom'
-// import { Provider } from 'react-redux'
-// import { createStore } from 'redux'
-// import Todo from './components/todos/Todo'
-// import todoApp from './reducers/todo/reducers'
-//
-// require('./styles/todo.less');
-//
-// const ele = document.getElementById('app');
-// const store = createStore(todoApp);
-//
-// render(
-//   <Provider store={store}>
-//     <Todo />
-//   </Provider>,
-//   ele
-// );
-//
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import Todo from './components/todos/Todo'
+import todoApp from './reducers/todo/reducers'
+
+require('./styles/todo.less');
+
+const store = createStore(todoApp);
+
+render(
+  <Provider store={store}>
+    <Todo />
+  </Provider>,
+
+  document.getElementById('app')
+);
+
