@@ -30,7 +30,7 @@ export default class App extends Component {
 
     return (
       <div>
-        <h3>点击了: { value } 次</h3>
+        <h3>点击了: { value } 次 </h3>
         <div>
           <button onClick={ OnIncrement }>+</button>
           <button onClick={ OnDecrement }>-</button>
