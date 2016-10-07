@@ -40,17 +40,17 @@ class Todo extends Component {
   }
 }
 
-Todo.PropTypes = {
-  visibleTodos: PropTypes.arrayOf(PropTypes.shape({
-    text: PropTypes.string.isRequired,
-    completed: PropTypes.bool.isRequired
-  }).isRequired).isRequired,
-  visibilityFilter: PropTypes.oneOf([
-    'show_all',
-    'show_completed',
-    'show_active'
-  ]).isRequired
-}
+// Todo.PropTypes = {
+//   visibleTodos: PropTypes.arrayOf(PropTypes.shape({
+//     text: PropTypes.string.isRequired,
+//     completed: PropTypes.bool.isRequired
+//   }).isRequired).isRequired,
+//   visibilityFilter: PropTypes.oneOf([
+//     'show_all',
+//     'show_completed',
+//     'show_active'
+//   ]).isRequired
+// }
 
 function selectTodos(todos, filter) {
   switch(filter) {
