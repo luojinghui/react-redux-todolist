@@ -59,6 +59,8 @@
 // render();
 // store.subscribe(render);
 
+
+//练习使用react+redux完成一个todo应用
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
