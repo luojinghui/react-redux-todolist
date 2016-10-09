@@ -13,7 +13,6 @@ import Footer from './Footer';
 class Todo extends Component {
   render() {
 
-      console.log(this.props);
     const { dispatch, visibleTodos, visibilityFilter } = this.props;
     return (
       <div>
@@ -40,17 +39,17 @@ class Todo extends Component {
   }
 }
 
-// Todo.PropTypes = {
-//   visibleTodos: PropTypes.arrayOf(PropTypes.shape({
-//     text: PropTypes.string.isRequired,
-//     completed: PropTypes.bool.isRequired
-//   }).isRequired).isRequired,
-//   visibilityFilter: PropTypes.oneOf([
-//     'show_all',
-//     'show_completed',
-//     'show_active'
-//   ]).isRequired
-// }
+Todo.PropTypes = {
+  visibleTodos: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired
+  }).isRequired).isRequired,
+  visibilityFilter: PropTypes.oneOf([
+    'show_all',
+    'show_completed',
+    'show_active'
+  ]).isRequired
+}
 
 function selectTodos(todos, filter) {
   switch(filter) {
@@ -73,20 +72,3 @@ function select(state) {
 // 包装 component ，注入 dispatch 和 state 到其默认的 connect(select)(App) 中；
 export default connect(select)(Todo)
 
-
-
-
-// todos = { [
-// {
-//   text: 'use Redux',
-//   completed: true
-// },
-// {
-//   text: 'learn to connect it to react',
-//     completed: false
-// },
-// {
-//   text: 'test value',
-//     completed: false
-// }
-// ] }
