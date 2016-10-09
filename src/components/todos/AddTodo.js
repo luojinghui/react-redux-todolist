@@ -16,16 +16,16 @@ class AddTodo extends Component {
     const todoNode = this.refs.todoValue;
     const todoValue = todoNode.value.trim();
 
+    e.stopPropagation();
+    e.preventDefault();
+
     if(todoValue === '') {
       todoNode.focus();
       return
-    } else {
-      this.props.onAddClick(todoValue);
-      todoNode.value = '';
     }
 
-    e.stopPropagation();
-    e.preventDefault();
+    this.props.onAddClick(todoValue);
+    todoNode.value = '';
   }
 
   render() {
