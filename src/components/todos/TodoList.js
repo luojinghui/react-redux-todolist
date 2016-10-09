@@ -15,7 +15,7 @@ class TodoList extends Component {
             <TodoLi
               {...todo}
               key = {index}
-              onClick = { () => this.props.onTodoClick(index) }
+              onClick = { () => this.props.onTodoClick(todo.id) }
             />
           )
         }
