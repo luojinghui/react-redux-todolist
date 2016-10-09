@@ -30,6 +30,7 @@ function todos(state = [], action) {
       ]
     case COMPLETE_TODO:
       let completed = !state[action.index].completed;
+
       return [
         ...state.slice(0, action.index),
         Object.assign({}, state[action.index], {completed: completed}),
